@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05070b">
+  <meta name="description" content="یک تجربه سینمایی و گفت‌وگومحور برای یادگیری اعتمادسازی، شناخت فیلترهای ذهن و یخ‌شکن.">
+  <title>هنر گفت‌وگو — مربی و کارآموز</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Estedad:wght@500;600;700;800;900&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/app.css">
+</head>
+<body>
+  <canvas id="shaderCanvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="pointer-light" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <button class="wordmark" type="button" data-jump="top" aria-label="بازگشت به آغاز">
+      <span class="wordmark-signet" aria-hidden="true"><i></i><i></i></span>
+      <span><strong>هنر گفت‌وگو</strong><small>مربی × کارآموز</small></span>
+    </button>
+
+    <nav class="chapter-nav" id="chapterNav" aria-label="فصل‌های آموزش"></nav>
+
+    <div class="top-actions">
+      <div class="progress-readout" aria-label="میزان پیشرفت">
+        <b id="progressValue">۰٪</b>
+        <span><i id="progressBar"></i></span>
+      </div>
+      <button class="focus-button" id="focusButton" type="button" aria-pressed="false">
+        <span class="focus-icon" aria-hidden="true"></span>
+        <span class="focus-label">حالت تمرکز</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" data-chapter-name="آغاز">
+      <div class="hero-media" aria-hidden="true">
+        <img src="./assets/hero-v2.webp" alt="" fetchpriority="high">
+        <div class="hero-vignette"></div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="overline reveal"><span></span> تجربهٔ تعاملی مربی و کارآموز</p>
+        <h1 class="reveal" data-delay="1">
+          گفت‌وگو را<br>
+          <em>از پشتِ کلمات</em><br>
+          ببین.
+        </h1>
+        <p class="hero-lead reveal" data-delay="2">اینجا قرار نیست جمله حفظ کنی. قدم‌به‌قدم کنار یک مربی می‌ایستی و می‌بینی اعتماد چطور ساخته می‌شود، ذهن کجا مقاومت می‌کند و یک گفت‌وگوی درست از کجا آغاز می‌شود.</p>
+        <button class="start-button reveal" data-delay="3" type="button" data-jump="course">
+          <span>ورود به جلسه</span>
+          <i aria-hidden="true">↓</i>
+        </button>
+      </div>
+
+      <div class="hero-dialogue reveal" data-delay="2" aria-label="نمونه گفت‌وگو">
+        <article class="hero-voice mentor">
+          <span>مربی</span>
+          <p>اول حس را بساز؛ بعد کلمات را بگو.</p>
+        </article>
+        <article class="hero-voice trainee">
+          <span>کارآموز</span>
+          <p>پس قرار نیست چیزی را تحمیل کنم؟</p>
+        </article>
+      </div>
+
+      <div class="scroll-mark" aria-hidden="true">
+        <span>اسکرول کن</span><i></i>
+      </div>
+    </section>
+
+    <section class="threshold" aria-label="آغاز مسیر">
+      <div class="threshold-line"></div>
+      <p class="reveal">هر پاسخ، پیش از آن‌که به زبان بیاید، از چند دروازه در ذهن عبور می‌کند.</p>
+      <div class="threshold-line"></div>
+    </section>
+
+    <section class="course" id="course" aria-live="polite">
+      <div class="course-loading" id="courseLoading">
+        <span></span>
+        <p>جلسه در حال آماده‌شدن است…</p>
+      </div>
+      <div id="courseContent"></div>
+    </section>
+
+    <section class="epilogue" id="epilogue">
+      <div class="epilogue-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p class="overline reveal"><span></span> پایان آموزش، آغاز تمرین</p>
+      <h2 class="reveal">کمتر توضیح بده.<br><em>بهتر گوش کن.</em></h2>
+      <p class="reveal">اعتماد بساز، نیاز را کشف کن، اختیار را نگه دار و اجازه بده مخاطب خودش برای ادامه قدم بردارد.</p>
+      <button class="restart-button reveal" type="button" data-jump="top">از ابتدا مرور کن <span aria-hidden="true">↑</span></button>
+    </section>
+  </main>
+
+  <div class="chapter-status" id="chapterStatus" aria-hidden="true">
+    <span>اکنون</span><strong>آغاز</strong>
+  </div>
+
+  <noscript><p class="noscript">برای نمایش گفت‌وگوها، جاوااسکریپت مرورگر را فعال کنید.</p></noscript>
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
